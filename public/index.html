@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+	<div class="fb-messenger-checkbox" origin="fbchat-ekt"
+			 page_id="148972009631"
+			 messenger_app_id="182222305144028"
+			 user_ref="aavilal.1106@gmail.com_780153040206-01"
+			 prechecked="true"
+			 allow_login="true"
+			 size="large">
+	</div>
+	<input type="button" onclick="confirmOptIn()" value="Confirm Opt-in"/>
+	<script> window.fbMessengerPlugins = window.fbMessengerPlugins || { init : function() { FB.init({ appId: "182222305144028", xfbml: true, version: "v2.6" }); }, callable : [] }; window.fbMessengerPlugins.callable.push( function() { var ruuid, fbPluginElements = document.querySelectorAll(".fb-messenger-checkbox[page_id='148972009631']"); if (fbPluginElements) { for( i = 0; i < fbPluginElements.length; i++ ) { ruuid = 'cf_' + (new Array(16).join().replace(/(.|$)/g, function(){return ((Math.random()*36)|0).toString(36)[Math.random()<.5?"toString":"toUpperCase"]();})); fbPluginElements[i].setAttribute('user_ref', ruuid) ; fbPluginElements[i].setAttribute('origin', window.location.href); window.confirmOptIn = function() { FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, { app_id:"182222305144028", page_id:"148972009631", ref:"aavilal.1106@gmail.com_780153040206-01", user_ref: ruuid }); }; } } }); window.fbAsyncInit = window.fbAsyncInit || function() { window.fbMessengerPlugins.callable.forEach( function( item ) { item(); } ); window.fbMessengerPlugins.init(); }; setTimeout( function() { (function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); }, 0); </script>
+</body>
+</html>
